@@ -5,8 +5,7 @@ import random
 def snakeLader():
     player1=0
     die=throw()
-    while(player1<=100):
-        player1+=die
+    player1+=die
     return player1
 
 def throw():
