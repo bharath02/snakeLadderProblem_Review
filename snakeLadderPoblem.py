@@ -2,9 +2,9 @@
 #UC1 Snake and Ladder game played with single player at start position 0
 #UC2 Player rolls the die to get a number 1 to 6
 #UC3  The Player then Check for a Option. they are No Play, Ladder or Snake.
+#UC4 Repeat till the Player reaches the winning position 100.
 import random
-def snakeLader():
-    player1=0
+def snakeLader(player1):
     die=throw()
     # Random Used for Noplay, Ladder and Snake bite
     option=random.randint(0,2)
@@ -23,4 +23,7 @@ def snakeLader():
 def throw():
     n = random.randint(1, 6)
     return n
-print("Postion of a player1",snakeLader())
+player1=0
+while(snakeLader(player1)<=100):
+    player1=snakeLader(player1)
+    print("Postion of a player1",player1)
