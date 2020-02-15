@@ -2,12 +2,13 @@
 #UC1 Snake and Ladder game played with single player at start position 0
 #UC2 Player rolls the die to get a number 1 to 6
 import random
-def snakeLader(player1):
-    n=throw()
-    player1=player1+n
+def snakeLader():
+    player1=0
+    die=throw()
+    player1+=die
     return player1
+
 def throw():
-    n=random.randint(1,6)
+    n = random.randint(1, 6)
     return n
-player1=0
-print("Postion of a player1",snakeLader(player1))
+print("Postion of a player1",snakeLader())
