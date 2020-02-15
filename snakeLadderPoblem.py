@@ -3,7 +3,8 @@
 #UC2 Player rolls the die to get a number 1 to 6
 #UC3  The Player then Check for a Option. they are No Play, Ladder or Snake.
 #UC4 Repeat till the Player reaches the winning position 100.
-#UC5position go above 100, the player stays in the same previous position till the player gets the exact number that adds to 100
+#UC5 position go above 100, the player stays in the same previous position till the player gets the exact number that adds to 100
+#UC6 Report the number of times the dice was played to win the game and also the position after every die role
 
 import random
 def snakeLader(player1):
@@ -28,7 +29,11 @@ def throw():
     n = random.randint(1, 6)
     return n
 player1=0
+count=0
 while(snakeLader(player1)<101):
+    count+=1
     player1=snakeLader(player1)
-    if(player1<=100):
+    print("Postion of a player1", player1)
+    if(player1==100):
+        print("Number of time Dies roll to win : ",count)
         print("Postion of a player1",player1)
