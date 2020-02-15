@@ -11,6 +11,4 @@ def snakeLader():
 def throw():
     n = random.randint(1, 6)
     return n
-
-player1=0
 print("Postion of a player1",snakeLader())
